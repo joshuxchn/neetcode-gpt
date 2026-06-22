@@ -13,15 +13,19 @@ class Solution:
         # Forward: z = dot(x, w) + b, y_hat = sigmoid(z)
         # Loss: L = 0.5 * (y_hat - y_true)^2
         # Return: (dL_dw rounded to 5 decimals, dL_db rounded to 5 decimals)
-        z = np.dot(x, w) + b
-        y_hat = 1 / (1 + np.exp(-z))
+        z = np.dot(x, w) + b #sum of neuron 
+        y_hat = 1 / (1 + np.exp(-z)) #activation
         error = y_hat-y_true
         loss = 0.5 *  (error)**2
 
         result = []
+        #or use dL_dw = np.round(delta * x, 5)
         for point in x:
-            result.append(np.round(error * y_hat*(1-y_hat) * point, 5))
-        bias = np.round(error * y_hat*(1-y_hat), 5)
+            #find gradient for each weight
+            result.append(np.round(error * y_hat*(1-y_hat) * point, 5)) #for each weight, follow chain rule
+
+        #find gradient of bias
+        bias = np.round(error * y_hat*(1-y_hat), 5) 
 
 
         return (result, bias)
