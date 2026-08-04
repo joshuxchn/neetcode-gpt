@@ -1,12 +1,11 @@
-# My GPT — Built from Scratch
+# gpt from scratch
 
-> Assembled from the NeetCode ML course on [NeetCode.io](https://neetcode.io)
-> Built by **joshua86** on June 14, 2026
+started on June 14, 2026
 
-Every file in this project is code I wrote and submitted while completing the NeetCode ML course.
-The problems progressively build from gradient descent fundamentals all the way to a working GPT.
+Coding by hand, no AI. Learn(ed)(ing) a lot.
 
-## Project Structure
+Goal: gradient descent fundamentals all the way to a working GPT.
+
 
 ```
 model/          Attention, Transformer, GPT architecture
@@ -46,12 +45,3 @@ python train.py
 python generate.py
 ```
 
-## Course
-
-This project was built by completing the [NeetCode ML Course](https://neetcode.io/practice?tab=coreSkills&topic=Machine+Learning):
-- Math Foundations (gradient descent, activations, loss functions)
-- Neural Networks from scratch (neuron, backprop, MLP)
-- PyTorch fundamentals
-- NLP pipeline (embeddings, tokenization, attention)
-- Transformer architecture
-- GPT model + text generation
